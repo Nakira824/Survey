@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card Survey</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form id="survey-form">
+      <header>
+        <h1 id="title">Credit Card Survey</h1>
+        <p id="description">We want to know what product works best</p>
+      </header>
+      <div>
+        <label id="name-label" for="name">Name:</label>
+        <input
+          type="text"
+          class="personal"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        /><br />
+        <label id="email-label" for="email">Email:</label>
+        <input
+          type="email"
+          class="personal"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        /><br />
+        <label id="number-label" for="number">Phone:</label>
+        <input
+          type="tel"
+          class="personal"
+          id="number"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          placeholder="Enter your number"
+          required
+        />
+      </div>
+      <h2>Product Type</h2>
+      <fieldset>
+        <legend>Will this be for personal or business use?</legend>
+        <input
+          id="personal"
+          type="radio"
+          name="personal-business"
+          value="personal;"
+          checked
+        />
+        <label for="Personal">Personal</label><br />
+        <label
+          ><input
+            id="business"
+            type="radio"
+            name="personal-business"
+            value="business"
+          />
+          Business</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend for="card options">Card Options</legend>
+        <select id="dropdown">
+          <option value="option1">Personal Platinum Mastercard</option>
+          <option value="option2">Personal World Mastercard</option>
+          <option value="option3">Business Commercial Mastercard</option>
+          <option value="option4">
+            Business Corporate Purchasing Mastercard
+          </option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Which Rewards do you prefer?</legend>
+        <input
+          id="statement-credit"
+          type="checkbox"
+          name="rewards[]"
+          value="statement-credit"
+          checked
+        />
+        <label for="statement credit">Statement Credit</label><br />
+        <input
+          id="cash back"
+          type="checkbox"
+          name="benefits"
+          value="cash back"
+        />
+        <label for="cash back">Cash Back</label><br />
+        <input id="travel" type="checkbox" name="benefits" value="travel" />
+        <label for="travel">Travel</label>
+      </fieldset>
+      <label for="comments">Comments:</label><br />
+      <textarea
+        type="text"
+        class="personal"
+        id="comments"
+        name="comments"
+        rows="5"
+        placeholder="Enter your comments here"
+      >
+      </textarea
+      ><br />
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
